@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+html {
+  background-color: black;
+}
+
+
+
+/* MOST IMPORTANT: remove default browser scroll smoothness */
+html {
+  scroll-behavior: auto !important;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-item {
+  opacity: 0;
+  animation: slideDown 0.4s ease-out forwards;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  /* background: white; */
+  padding: 10px 20px;
+  z-index: 999;
+  /* keeps it above content */
+  /* border-bottom: 1px solid #eee; */
+}
+
+/* for scrollbar */
+body,
+html {
+  scrollbar-width: 10px;
+  scrollbar-color: #7743de #e0e0e0;
+}
+
+/* Chrome, Edge, Safari */
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  width: 50px;
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 0 !important;
+}
+
+body::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+  background: #7743de;
+  border-radius: 0 !important;
+}
+
+body::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 0 !important;
+}

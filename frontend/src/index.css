@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* MOST IMPORTANT: remove default browser scroll smoothness */
+html {
+  scroll-behavior: auto !important;
+}
